@@ -27,7 +27,7 @@ Partial Class frmMain
         Me.txtModelName = New System.Windows.Forms.TextBox()
         Me.txtFWVersion = New System.Windows.Forms.TextBox()
         Me.txtHostName = New System.Windows.Forms.TextBox()
-        Me.lblIPAddress = New System.Windows.Forms.Label()
+        Me.lblReaderID = New System.Windows.Forms.Label()
         Me.lblModelName = New System.Windows.Forms.Label()
         Me.lblFWVersion = New System.Windows.Forms.Label()
         Me.lblHostName = New System.Windows.Forms.Label()
@@ -46,20 +46,20 @@ Partial Class frmMain
         Me.EventType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lbReaderIP = New System.Windows.Forms.Label()
         Me.pnlSettings = New System.Windows.Forms.Panel()
+        Me.nudFOVTimeout = New System.Windows.Forms.NumericUpDown()
+        Me.lblFOVTimeout = New System.Windows.Forms.Label()
         Me.nudDuration = New System.Windows.Forms.NumericUpDown()
         Me.lblStopTagDetection = New System.Windows.Forms.Label()
         Me.nudPeriod = New System.Windows.Forms.NumericUpDown()
         Me.lblTagDetectionPeriod = New System.Windows.Forms.Label()
         Me.txtInputPort = New System.Windows.Forms.TextBox()
         Me.lblReaderPort = New System.Windows.Forms.Label()
-        Me.lblFOVTimeout = New System.Windows.Forms.Label()
-        Me.nudFOVTimeout = New System.Windows.Forms.NumericUpDown()
         Me.pnlProperties.SuspendLayout()
         CType(Me.dgvTagData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSettings.SuspendLayout()
+        CType(Me.nudFOVTimeout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudDuration, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudPeriod, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudFOVTimeout, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlProperties
@@ -69,7 +69,7 @@ Partial Class frmMain
         Me.pnlProperties.Controls.Add(Me.txtModelName)
         Me.pnlProperties.Controls.Add(Me.txtFWVersion)
         Me.pnlProperties.Controls.Add(Me.txtHostName)
-        Me.pnlProperties.Controls.Add(Me.lblIPAddress)
+        Me.pnlProperties.Controls.Add(Me.lblReaderID)
         Me.pnlProperties.Controls.Add(Me.lblModelName)
         Me.pnlProperties.Controls.Add(Me.lblFWVersion)
         Me.pnlProperties.Controls.Add(Me.lblHostName)
@@ -114,15 +114,15 @@ Partial Class frmMain
         Me.txtHostName.Size = New System.Drawing.Size(154, 22)
         Me.txtHostName.TabIndex = 4
         '
-        'lblIPAddress
+        'lblReaderID
         '
-        Me.lblIPAddress.AutoSize = True
-        Me.lblIPAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIPAddress.Location = New System.Drawing.Point(17, 104)
-        Me.lblIPAddress.Name = "lblIPAddress"
-        Me.lblIPAddress.Size = New System.Drawing.Size(74, 16)
-        Me.lblIPAddress.TabIndex = 3
-        Me.lblIPAddress.Text = "IP Address"
+        Me.lblReaderID.AutoSize = True
+        Me.lblReaderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReaderID.Location = New System.Drawing.Point(17, 104)
+        Me.lblReaderID.Name = "lblReaderID"
+        Me.lblReaderID.Size = New System.Drawing.Size(70, 16)
+        Me.lblReaderID.TabIndex = 3
+        Me.lblReaderID.Text = "Reader ID"
         '
         'lblModelName
         '
@@ -278,6 +278,26 @@ Partial Class frmMain
         Me.pnlSettings.Size = New System.Drawing.Size(283, 134)
         Me.pnlSettings.TabIndex = 6
         '
+        'nudFOVTimeout
+        '
+        Me.nudFOVTimeout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudFOVTimeout.Location = New System.Drawing.Point(234, 73)
+        Me.nudFOVTimeout.Name = "nudFOVTimeout"
+        Me.nudFOVTimeout.Size = New System.Drawing.Size(38, 22)
+        Me.nudFOVTimeout.TabIndex = 8
+        Me.nudFOVTimeout.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'lblFOVTimeout
+        '
+        Me.lblFOVTimeout.AutoSize = True
+        Me.lblFOVTimeout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFOVTimeout.Location = New System.Drawing.Point(8, 72)
+        Me.lblFOVTimeout.Name = "lblFOVTimeout"
+        Me.lblFOVTimeout.Size = New System.Drawing.Size(87, 16)
+        Me.lblFOVTimeout.TabIndex = 7
+        Me.lblFOVTimeout.Tag = ""
+        Me.lblFOVTimeout.Text = "FOV Timeout"
+        '
         'nudDuration
         '
         Me.nudDuration.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -335,26 +355,6 @@ Partial Class frmMain
         Me.lblReaderPort.TabIndex = 8
         Me.lblReaderPort.Text = "Port"
         '
-        'lblFOVTimeout
-        '
-        Me.lblFOVTimeout.AutoSize = True
-        Me.lblFOVTimeout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFOVTimeout.Location = New System.Drawing.Point(8, 72)
-        Me.lblFOVTimeout.Name = "lblFOVTimeout"
-        Me.lblFOVTimeout.Size = New System.Drawing.Size(87, 16)
-        Me.lblFOVTimeout.TabIndex = 7
-        Me.lblFOVTimeout.Tag = ""
-        Me.lblFOVTimeout.Text = "FOV Timeout"
-        '
-        'nudFOVTimeout
-        '
-        Me.nudFOVTimeout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudFOVTimeout.Location = New System.Drawing.Point(234, 73)
-        Me.nudFOVTimeout.Name = "nudFOVTimeout"
-        Me.nudFOVTimeout.Size = New System.Drawing.Size(38, 22)
-        Me.nudFOVTimeout.TabIndex = 8
-        Me.nudFOVTimeout.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,9 +377,9 @@ Partial Class frmMain
         CType(Me.dgvTagData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSettings.ResumeLayout(False)
         Me.pnlSettings.PerformLayout()
+        CType(Me.nudFOVTimeout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudDuration, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudPeriod, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudFOVTimeout, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -390,7 +390,7 @@ Partial Class frmMain
     Friend WithEvents txtModelName As TextBox
     Friend WithEvents txtFWVersion As TextBox
     Friend WithEvents txtHostName As TextBox
-    Friend WithEvents lblIPAddress As Label
+    Friend WithEvents lblReaderID As Label
     Friend WithEvents lblModelName As Label
     Friend WithEvents lblFWVersion As Label
     Friend WithEvents lblHostName As Label

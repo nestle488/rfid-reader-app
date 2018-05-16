@@ -19,7 +19,7 @@ Public Class frmMain
             txtHostName.Text = props.Item("HostName")
             txtFWVersion.Text = props.Item("FirmwareVerion")
             txtModelName.Text = props.Item("ModelName")
-            'txtIPAddress.Text = props.Item("IPAddress")
+            txtIPAddress.Text = props.Item("ReaderID")
             rfid.TagDetectPeriod = nudPeriod.Value
             rfid.TagDetectDuration = nudDuration.Value
             rfid.FOVTimeout = nudFOVTimeout.Value

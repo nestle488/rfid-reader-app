@@ -103,6 +103,7 @@ Public Class clsRFIDReader
         props.Add("HostName", RFIDReader.HostName)
         props.Add("FirmwareVerion", RFIDReader.ReaderCapabilities.FirwareVersion)
         props.Add("ModelName", RFIDReader.ReaderCapabilities.ModelName)
+        props.Add("ReaderID", RFIDReader.ReaderCapabilities.ReaderID.ID)
 
 
     End Sub
